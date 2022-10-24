@@ -1,5 +1,7 @@
 package application;
 
+import java.sql.Date;
+import java.time.LocalDate;
 import java.util.ArrayList;
 import java.util.List;
 
@@ -30,6 +32,11 @@ public class Program {
 		for(Seller s : list3) {
 			System.out.println(s);
 		}
+		
+		System.out.println("\n====== TEST 4: SELLER Insert =====");
+			Seller newSeller = new Seller(null, "Greg","greg@gmail.com", LocalDate.now(), 3000.0, dep);
+			sellerDao.insert(newSeller);
+			System.out.println("Inserted! New Id = "+ newSeller.getId());
 		
 	}
 
